@@ -21,14 +21,10 @@ function createThumbnails(thumbnail) {
     thumbnailContainer.appendChild(image);
     image.addEventListener("click", function () {
       console.log("clicked");
+      largeImageContainer.innerHTML = null;
+      const copyImage = image.cloneNode(true);
+      largeImageContainer.appendChild(copyImage);
     });
   }
 }
 createThumbnails(images);
-
-// let imageButton = document.querySelector(images);
-// imageButton.addEventListener("click", function (click) {
-//   console.log("clicked");
-// });
-
-// function createLargeImages(largeImage)
