@@ -7,11 +7,11 @@ let image = [
   { src: "./reubenlying.png", alt: "an alsatian lying down" },
 ];
 
-function createThumbnails(imageArray){
-    for (i=0; <= image.length; i++) {
-      let imageDaisy = document.createElement('img');
-      let imageHorse = document.createElement('img');
-      let imageFlowers = document.createElement('img');
-      let imageReuben = document.createElement('img');
-    }
-  }  
+function createThumbnails(imageArray) {
+  for (i = 0; i <= image.length; i++) {
+    let imageDaisy = document.createElement("img");
+    let imageHorse = document.createElement("img");
+    let imageFlowers = document.createElement("img");
+    let imageReuben = document.createElement("img");
+  }
+}
