@@ -1,6 +1,8 @@
 console.log("test");
 
-let image = [
+const thumbnailContainer = document.getElementById("thumbnail-container");
+
+const images = [
   { src: "./daisy.jpg", alt: "a jack russel terrier in long grass" },
   { src: "./onyxhorse.png", alt: "an ornamental horse" },
   { src: "./pinkflowers.png", alt: "a bouqet of pink flowers" },
@@ -8,10 +10,10 @@ let image = [
 ];
 
 function createThumbnails(imageArray) {
-  for (i = 0; i <= image.length; i++) {
-    let imageDaisy = document.createElement("img");
-    let imageHorse = document.createElement("img");
-    let imageFlowers = document.createElement("img");
-    let imageReuben = document.createElement("img");
+  for (i = 0; i <= images.length; i++) {
+    let imageDaisy = images.index[0];
+    let imageHorse = images.index[1];
+    let imageFlowers = images.index[2];
+    let imageReuben = images.index[3];
   }
 }
