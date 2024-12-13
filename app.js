@@ -10,22 +10,33 @@ const images = [
   { src: "./reubenlying.png", alt: "an alsatian lying down" },
 ];
 
-console.log(images);
+let copyImage = document.createElement("img");
+copyImage.src = images[0].src;
+copyImage.alt = images[0].alt;
+copyImage.className = "copy-image";
+largeImageContainer.appendChild(copyImage);
 
 function createThumbnails(thumbnail) {
   for (let i = 0; i < images.length; i++) {
-    let image = document.createElement("img");
-    image.src = thumbnail[i].src;
-    image.alt = thumbnail[i].alt;
+    let image = document.createElement("button");
+    let buttonImage = document.createElement("img");
+
+    image.appendChild(buttonImage);
+
+    buttonImage.src = thumbnail[i].src;
+    buttonImage.alt = thumbnail[i].alt;
     image.className = "thumbnail";
+    buttonImage.className = "thumbnail-image";
+
     thumbnailContainer.appendChild(image);
+
     image.addEventListener("click", function () {
-      console.log("clicked");
       largeImageContainer.innerHTML = null;
-      const copyImage = image.cloneNode(true);
+      copyImage.src = thumbnail[i].src;
+      copyImage.alt = thumbnail[i].alt;
       largeImageContainer.appendChild(copyImage);
-      copyImage.className = "copy-image";
     });
   }
 }
+
 createThumbnails(images);
