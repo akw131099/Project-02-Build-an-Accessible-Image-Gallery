@@ -24,6 +24,7 @@ function createThumbnails(thumbnail) {
       largeImageContainer.innerHTML = null;
       const copyImage = image.cloneNode(true);
       largeImageContainer.appendChild(copyImage);
+      copyImage.className = "copy-image";
     });
   }
 }

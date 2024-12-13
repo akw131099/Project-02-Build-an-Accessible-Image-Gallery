@@ -1,15 +1,45 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
-#thumbnail-container {
-  display: flex;
-  position: fixed;
-  width: 60px;
-  bottom: 10px;
-  left: 11rem;
-  justify-content: center;
+body {
+  background: grey;
 }
 
-/* .thumbnail1 {
-  position: absolute;
+.thumbnail {
+  border: solid black;
+}
+
+.thumbnail:hover {
+  border: solid plum;
+}
+
+#thumbnail-container {
+  display: inline-flex;
+  position: fixed;
   width: 100px;
-} */
+  bottom: 10px;
+  left: 30rem;
+}
+
+.copy-image,
+#large-image-container {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+}
+@media (max-width: 375px) {
+  #thumbnail-container {
+    position: fixed;
+    display: flex;
+    align-items: end;
+    width: 60px;
+    bottom: 5px;
+    left: 70px;
+  }
+  #large-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
