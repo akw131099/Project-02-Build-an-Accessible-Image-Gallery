@@ -1,6 +1,7 @@
 console.log("test");
 
 const thumbnailContainer = document.getElementById("thumbnail-container");
+const largeImageContainer = document.getElementById("large-image-container");
 
 const images = [
   { src: "./daisy.jpg", alt: "a jack russel terrier in long grass" },
@@ -11,15 +12,23 @@ const images = [
 
 console.log(images);
 
-function createThumbnails(image1) {
+function createThumbnails(thumbnail) {
   for (let i = 0; i < images.length; i++) {
-    let image1 = document.createElement("img");
-    image1.src = images[i].src;
-    image1.alt = images[i].alt;
-    image1.className = "thumbnail1";
-    thumbnailContainer.appendChild(image1);
-
-    console.log("hi");
+    let image = document.createElement("img");
+    image.src = thumbnail[i].src;
+    image.alt = thumbnail[i].alt;
+    image.className = "thumbnail";
+    thumbnailContainer.appendChild(image);
+    image.addEventListener("click", function () {
+      console.log("clicked");
+    });
   }
 }
-createThumbnails();
+createThumbnails(images);
+
+// let imageButton = document.querySelector(images);
+// imageButton.addEventListener("click", function (click) {
+//   console.log("clicked");
+// });
+
+// function createLargeImages(largeImage)
