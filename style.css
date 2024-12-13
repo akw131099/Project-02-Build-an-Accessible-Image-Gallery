@@ -1,1 +1,15 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+#thumbnail-container {
+  display: flex;
+  position: fixed;
+  width: 60px;
+  bottom: 10px;
+  left: 11rem;
+  justify-content: center;
+}
+
+/* .thumbnail1 {
+  position: absolute;
+  width: 100px;
+} */
