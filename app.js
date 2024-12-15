@@ -1,5 +1,3 @@
-console.log("test");
-
 const thumbnailContainer = document.getElementById("thumbnail-container");
 const largeImageContainer = document.getElementById("large-image-container");
 
@@ -31,7 +29,7 @@ function createThumbnails(thumbnail) {
     thumbnailContainer.appendChild(image);
 
     image.addEventListener("click", function () {
-      //adding an event listener to perform an action when clicked
+      //adding an event listener to perform a function when clicked
       largeImageContainer.innerHTML = null; //this function first clears the content inside largeImageContainer
       copyImage.src = thumbnail[i].src; //then pulls src and alt from the loop
       copyImage.alt = thumbnail[i].alt;

@@ -35,9 +35,9 @@ body {
   grid-row-end: 4;
 }
 
-.copy-image,
+/* .copy-image,
 #large-image-container {
-}
+} */
 
 footer {
   position: fixed;
